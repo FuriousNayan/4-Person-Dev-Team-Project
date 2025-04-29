@@ -9,11 +9,10 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 300px); 
-    gap: 10px; 
+    gap: 30px; 
     max-width: fit-content;
     padding-top: 150px;
     margin-inline: auto;
-    
 }
 /*
 For whoever is doing the music on the side, the margin-right in the container field 
@@ -24,10 +23,10 @@ For whoever is doing the title, the padding-top is moving it down, so add the ti
 
 .dropBox {
     position: unset;
-    width: 300px;
-    height: 300px;
-    border: 2px solid #9a9a9a; 
-    border-radius: 20px;
+    width: 320px;
+    height: 180px;
+    border: 2px dashed #9a9a9a; 
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,18 +40,24 @@ For whoever is doing the title, the padding-top is moving it down, so add the ti
 }
 
 #image-sidebar {
-    width: 200px; 
+    background-color: #7ca8c5;
+    width: 420px; 
     height: 100vh; 
     overflow-y: auto; 
+    overflow-x: hidden;
     border-right: 2px solid #ccc;
     padding: 10px;
+    padding-right: 18px;
     box-sizing: border-box;
   }
   
 .sidebar-image {
     width: 100%;
     margin-bottom: 10px;
+    border: 5px solid white;
+    border-radius: 5px;
     cursor: grab;
+    
 }
 
 body {
