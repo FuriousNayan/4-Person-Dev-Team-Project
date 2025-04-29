@@ -48,3 +48,6 @@ dropAreas.forEach((dArea) => {
         }
     })
 })
+
+// For everyones reference, the above code is the bulk of the logic for dragging and dropping,
+// So try and not touch the code above. 

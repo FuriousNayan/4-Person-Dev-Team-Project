@@ -11,10 +11,16 @@
     grid-template-columns: repeat(3, 300px); 
     gap: 10px; 
     max-width: fit-content;
-    padding-top: 100px;
+    padding-top: 150px;
     margin-inline: auto;
-    
+    margin-right: 250px
 }
+/*
+For whoever is doing the music on the side, the margin-right in the container field 
+moved it a little to the left. Add the music on the side
+
+For whoever is doing the title, the padding-top is moving it down, so add the title at the top of that. 
+*/
 
 .dropBox {
     position: unset;
