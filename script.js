@@ -48,6 +48,25 @@ dropAreas.forEach((dArea) => {
         }
     })
 })
+const imageSidebar = document.getElementById("image-sidebar")
+const hideButton = document.getElementById("hideButton")
+const container = document.querySelectorAll(".container")
+ 
+// Button function to remove sidebar
+let hidden = false;
+hideButton.addEventListener("click", function() {
+    if (hidden) {
+        imageSidebar.style.visibility = "visible"
+        hideButton.innerHTML = "Hide"
+        hidden = false;
+    } else {
+        imageSidebar.style.visibility = "hidden"
+        hideButton.innerHTML = "Unhide"
+        hidden = true;
+    }
+})
+
+
 
 // For everyones reference, the above code is the bulk of the logic for dragging and dropping,
 // So try and not touch the code above. 
