@@ -8,19 +8,19 @@
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 200px); 
+    grid-template-columns: repeat(3, 300px); 
     gap: 10px; 
-    padding-top: 200px;
     max-width: fit-content;
+    padding-top: 100px;
     margin-inline: auto;
     
 }
 
 .dropBox {
     position: unset;
-    width: 200px;
-    height: 200px;
-    border: 2px dashed #9a9a9a; 
+    width: 300px;
+    height: 300px;
+    border: 2px solid #9a9a9a; 
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -43,8 +43,16 @@
     box-sizing: border-box;
   }
   
-  .sidebar-image {
+.sidebar-image {
     width: 100%;
     margin-bottom: 10px;
     cursor: grab;
-  }
+}
+
+body {
+    background-color: seashell
+}
+
+img {
+    border: 2px solid black
+}
