@@ -105,7 +105,25 @@ img {
     transform: translateX(-50%);
 }
 
+.textbox {
+    width: 320px;
+    padding: 2px;
+    font-size: large;
+    font-family: "Dekko";
+    border-radius: 15px;
+    background-color: rgb(252, 233, 217);
+}
+
+
+
 #audio1 {
     margin: 200px;
 }
 
+
+
+#title{
+    font-size: xx-large;
+    text-align: center;
+    align-items: center;
+}

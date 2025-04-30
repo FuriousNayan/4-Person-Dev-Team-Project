@@ -56,11 +56,11 @@ const container = document.querySelectorAll(".container")
 let hidden = false;
 hideButton.addEventListener("click", function() {
     if (hidden) {
-        imageSidebar.style.visibility = "visible"
+        imageSidebar.style.display = "grid"
         hideButton.innerHTML = "Hide"
         hidden = false;
     } else {
-        imageSidebar.style.visibility = "hidden"
+        imageSidebar.style.display = "none"
         hideButton.innerHTML = "Unhide"
         hidden = true;
     }
