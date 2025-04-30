@@ -88,3 +88,13 @@ img {
     right: 5%;        
     transform: translateX(-50%);
 }
+
+.textbox {
+    width: 320px;
+    padding: 2px;
+    font-size: large;
+    font-family: "Dekko";
+    border-radius: 15px;
+    background-color: rgb(252, 233, 217);
+}
+
