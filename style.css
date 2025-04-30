@@ -94,3 +94,8 @@ img {
     right: 5%;        
     transform: translateX(-50%);
 }
+
+#audio1 {
+    margin: 200px;
+}
+
