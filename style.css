@@ -88,3 +88,9 @@ img {
     right: 5%;        
     transform: translateX(-50%);
 }
+
+#title{
+    font-size: xx-large;
+    text-align: center;
+    align-items: center;
+}
