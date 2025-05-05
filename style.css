@@ -134,6 +134,18 @@ img {
     background-color: white;
     border: none;
 }
+
+#colorButton {
+    width: auto;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 475px;        
+    transform: translateX(-50%);
+    font-size: large;
+    background-color: white;
+    border: none;
+}
  
 .textbox {
     min-width: 160px;
@@ -161,9 +173,6 @@ img {
     margin: 200px;
 }
  
-::-webkit-scrollbar-track {
-    background-color: #3f6a86;
-}
 
 .Music {
     border-radius: 50%;
