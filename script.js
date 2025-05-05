@@ -1,6 +1,27 @@
 const dropAreas = document.querySelectorAll(".dropBox")
  
-const funFacts = []
+const funFacts = [
+    "Did you know that chiikawa is Non-binary?", 
+    "Did you know the full title of chiikawa(Nanka Chiisakute Kawaii Yatsu) means 'Something Small and Cute'?",
+    "Did you know chiikawa is seen as a timid and weak but bbrave character?",
+    "Did you know chiikawa is the weakest out of the usagi and hachiware trio?",
+    "Did you know chiikawa is not a hamster but a cute little thing?",
+    "Did you know chiikawa once won a housse in a yogurt contest?",
+    "Did you know chiikawa hates broccoli?",
+    "Did you know chiikawa has 4 toes?",
+    "Did you know chiikawas birthday is May 1st 2017?",
+    "Did you know",
+    "Did you know",
+    "Did you know",
+    "Did you know",
+    "Did you know",
+    "Did you know",
+    "Did you know",
+    "Did you know",
+    "Did you know",
+    "Did you know",
+    "Did you know",
+]
 
 
 setInterval(() => {
