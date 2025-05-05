@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+   
     <div style="display: flex; height: 100vh;">
         <div id="image-sidebar">
             <img src="Images/Beachball.png" draggable="true" class="sidebar-image">
@@ -25,71 +25,107 @@
             <img src="Images/Impact_frame.png" draggable="true" class="sidebar-image">
             <img src="Images/Void_monster.png" draggable="true" class="sidebar-image">
             <img src="Images/Void_Exploration.png" draggable="true" class="sidebar-image">
-          </div>
-        <div class="righte">
+            <img src="Images/Caught.png" draggable="true" class="sidebar-image">
+            <img src="Images/Fishing.png" draggable="true" class="sidebar-image">
+            <img src="Images/Chased.png" draggable="true" class="sidebar-image">
+            <img src="Images/FMonster_Closeup.png" draggable="true" class="sidebar-image">
+            <img src="Images/Forest_monster.png" draggable="true" class="sidebar-image">
+            <img src="Images/Frolicking.png" draggable="true" class="sidebar-image">
+            <img src="Images/Meeting_friends.png" draggable="true" class="sidebar-image">
+            <img src="Images/Sea_monster.png" draggable="true" class="sidebar-image">
+            <img src="Images/Water.png" draggable="true" class="sidebar-image">
+        </div>
+        <div class="middle">
             <div class="Logo">
-                <img src = "Images/Chiikawa comics.png" class = "title-image">
+                <img src = "Images/LogoAlternative.png" class = "title-image" id="Logo">
             </div>
             <div class="main">
                 <center>
-                <input class="container" id="title" placeholder="Title" style="text-align: center; "></input>
+                <textarea class="title" id="title" rows="2" wrap="hard" placeholder="Your Title" style=" resize: none; text-align: center; margin-top: 50px; justify-content: center;"></textarea>
                 </center>
-                <br>
-                <br>
-
+ 
             <div class = "container">
                 <div class = "dropBox">Drop Panel 1 Here</div>
                 <div class = "dropBox">Drop Panel 2 here</div>
                 <div class = "dropBox">Drop Panel 3 here</div>
-
-                <textarea class="textbox" rows="4" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
-                <textarea class="textbox" rows="4" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
-                <textarea class="textbox" rows="4" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
-                <br>
+ 
+                <textarea class="textbox" rows="3" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
+                <textarea class="textbox" rows="3" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
+                <textarea class="textbox" rows="3" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
             </div>
             <div class="container">
                 <div class = "dropBox">Drop Panel 4 Here</div>
                 <div class = "dropBox">Drop Panel 5 here</div>
                 <div class = "dropBox">Drop Panel 6 Here</div>
-                <textarea class="textbox" rows="4" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
-                <textarea class="textbox" rows="4" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
-                <textarea class="textbox" rows="4" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
+                <textarea class="textbox" rows="3" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
+                <textarea class="textbox" rows="3" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
+                <textarea class="textbox" rows="3" cols="20" wrap="hard" maxlength="150" style="resize: none; text-align: center;" placeholder="Add your Text"></textarea>
                 <br>
             </div>
-                
-                <br>
+               
             </div>
-        
-        <div>
-            <audio controls id = 'audio'>
-                <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
-            </audio>
-            <audio controls id = 'audio'>
-                <source src = 'Music/Kevin MacLeod - Beach Party.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
-            </audio>
-            <audio controls id = 'audio'>
-                <source src = 'Music/Kevin MacLeod - Fluffing a Duck.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
-            </audio>
-            <audio controls id = 'audio'>
-                <source src = 'Music/21. Timely.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
-            </audio>
-            <audio controls id = 'audio'>
-                <source src = 'Music/04. Daytime Theme.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
-            </audio>
-            <audio controls id = 'audio'>
-                <source src = 'Music/09. Nighttime Theme.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
-            </audio>
+            <!--
+            <div>
+                <audio controls id = 'audio'>
+                    <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
+                </audio>
+                <audio controls id = 'audio'>
+                    <source src = 'Music/Kevin MacLeod - Beach Party.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
+                </audio>
+                <audio controls id = 'audio'>
+                    <source src = 'Music/Kevin MacLeod - Fluffing a Duck.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
+                </audio>
+                <audio controls id = 'audio'>
+                    <source src = 'Music/21. Timely.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
+                </audio>
+               
+                <audio controls id = 'audio'>
+                    <source src = 'Music/04. Daytime Theme.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
+                </audio>
+                <audio controls id = 'audio'>
+                    <source src = 'Music/09. Nighttime Theme.mp3' type = 'audio/mp3'> <source src = 'Music/Kevin MacLeod - Monkeys Spinning Monkeys.mp3' type = 'audio/mp3' class = 'audio1'>
+                </audio>
+               
+            </div>    
+            -->
+           
         </div>
-            
-                
-            </div>
-            <button id="hideButton">Hide</button>
+ 
+        <div id="right-bar">
+            <h1 style="color: white;">Song Selection</h1>
+            <button class='Music'>
+                <img src="/Other/Song1.png" id="Song1" class="song">
+            </button>
+            <button class='Music'>
+                <img src="/Other/Song2.png" id="Song2" class="song">
+            </button>            
+            <button class='Music'>
+                <img src="/Other/Song3.png" id="Song3" class="song">
+            </button>            
+            <button class='Music'> 
+                <img src="/Other/Song4.png" id="Song4" class="song">
+            </button>              
+            <button class='Music'> 
+                <img src="/Other/Song5.png" id="Song5" class="song">
+            </button>             
+            <button class='Music'> 
+                <img src="/Other/Song6.png" id="Song6" class="song">
+            </button>            
+         </div>
+ 
+        <!--
+        <div style="display: flex; height: 100vh;">
+         
+       
+        </div>
+        -->
+ 
+        <button id="hideButton">Hide</button>
    
         </div>
-
+       
     </div>
-    
-    
+   
+   
 </body>
 </html>
-
