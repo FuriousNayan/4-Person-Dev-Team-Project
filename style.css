@@ -134,6 +134,18 @@ img {
     background-color: white;
     border: none;
 }
+
+#bioButton {
+    width: auto;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 700px;        
+    transform: translateX(-50%);
+    font-size: large;
+    background-color: white;
+    border: none;
+}
  
 .textbox {
     min-width: 160px;

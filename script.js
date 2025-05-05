@@ -80,6 +80,14 @@ hideButton.addEventListener("click", function() {
  
 
 
+
+
+const bioButton = document.getElementById('bioButton')
+bioButton.addEventListener('click', function(){
+    window.location.href = 'bio.html'
+})
+
+
  
  
  
