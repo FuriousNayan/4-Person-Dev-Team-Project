@@ -1,4 +1,11 @@
 const dropAreas = document.querySelectorAll(".dropBox")
+const funFacts = []
+
+
+setInterval(() => {
+    const randomIndex = Math.floor(Math.random() * funFacts.length);
+    alert(funFacts[randomIndex]);
+  }, 60000); 
 
 dropAreas.forEach((dArea) => {
     dArea.addEventListener("dragover", (event) => {
