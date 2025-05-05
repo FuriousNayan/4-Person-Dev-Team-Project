@@ -1,5 +1,13 @@
 const dropAreas = document.querySelectorAll(".dropBox")
  
+const funFacts = []
+
+
+setInterval(() => {
+    const randomIndex = Math.floor(Math.random() * funFacts.length);
+    alert(funFacts[randomIndex]);
+  }, 60000); 
+
 dropAreas.forEach((dArea) => {
     dArea.addEventListener("dragover", (event) => {
         event.preventDefault();
@@ -106,6 +114,14 @@ colorButton.addEventListener("click", function(){
         Song6.src = "/Other/Song6.png"
         color = "blue"
     }
+})
+
+
+
+
+const bioButton = document.getElementById('bioButton')
+bioButton.addEventListener('click', function(){
+    window.location.href = 'bio.html'
 })
 
 
