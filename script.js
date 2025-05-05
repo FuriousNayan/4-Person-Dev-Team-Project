@@ -81,6 +81,7 @@ dropAreas.forEach((dArea) => {
 const imageSidebar = document.getElementById("image-sidebar")
 const soundSidebar = document.getElementById('right-bar')
 const hideButton = document.getElementById("hideButton")
+const colorButton = document.getElementById("colorButton")
 const container = document.querySelectorAll(".container")
  
 // Button function to remove sidebar
@@ -98,7 +99,51 @@ hideButton.addEventListener("click", function() {
         hidden = true;
     }
 })
+
+const Song1 = document.getElementById("Song1")
+const Song2 = document.getElementById("Song2")
+const Song3 = document.getElementById("Song3")
+const Song4 = document.getElementById("Song4")
+const Song5 = document.getElementById("Song5")
+const Song6 = document.getElementById("Song6")
+
  
+const logo = document.getElementById("Logo")
+const rightBar = document.getElementById("right-bar")
+let color = "blue";
+colorButton.addEventListener("click", function(){
+    if (color == "blue") {
+        logo.src = "Images/LogoPink.png"
+        rightBar.style.backgroundColor = "#fbc9f0"
+        imageSidebar.style.backgroundColor = "#fbc9f0"
+        Song1.src = "/Other/Song1Pink.png"
+        Song2.src = "/Other/Song2Pink.png"
+        Song3.src = "/Other/Song3Pink.png"
+        Song4.src = "/Other/Song4Pink.png"
+        Song5.src = "/Other/Song5Pink.png"
+        Song6.src = "/Other/Song6Pink.png"
+        color = "pink"
+    } else {
+        logo.src = "Images/LogoAlternative.png"
+        rightBar.style.backgroundColor = "#3f6a86"
+        imageSidebar.style.backgroundColor = "#3f6a86"
+        Song1.src = "/Other/Song1.png"
+        Song2.src = "/Other/Song2.png"
+        Song3.src = "/Other/Song3.png"
+        Song4.src = "/Other/Song4.png"
+        Song5.src = "/Other/Song5.png"
+        Song6.src = "/Other/Song6.png"
+        color = "blue"
+    }
+})
+
+
+
+
+const bioButton = document.getElementById('bioButton')
+bioButton.addEventListener('click', function(){
+    window.location.href = 'bio.html'
+})
 
 
  
