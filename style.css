@@ -19,12 +19,6 @@
     max-width: fit-content;
     margin-inline: auto;
 }
-/*
-For whoever is doing the music on the side, the margin-right in the container field
-moved it a little to the left. Add the music on the side
- 
-For whoever is doing the title, the padding-top is moving it down, so add the title at the top of that.
-*/
  
 body {
     background-image: url("Other/grid_background.png");
@@ -153,7 +147,7 @@ img {
     height: 30px;
     position: absolute;
     bottom: 20px;
-    left: 700px;        
+    left: 85%;        
     transform: translateX(-50%);
     font-size: large;
     background-color: white;

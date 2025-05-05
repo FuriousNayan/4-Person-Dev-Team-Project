@@ -1,26 +1,26 @@
 const dropAreas = document.querySelectorAll(".dropBox")
  
 const funFacts = [
-    "Did you know that chiikawa is Non-binary?", 
-    "Did you know the full title of chiikawa(Nanka Chiisakute Kawaii Yatsu) means 'Something Small and Cute'?",
-    "Did you know chiikawa is seen as a timid and weak but bbrave character?",
-    "Did you know chiikawa is the weakest out of the usagi and hachiware trio?",
-    "Did you know chiikawa is not a hamster but a cute little thing?",
-    "Did you know chiikawa once won a housse in a yogurt contest?",
-    "Did you know chiikawa hates broccoli?",
-    "Did you know chiikawa has 4 toes?",
-    "Did you know chiikawas birthday is May 1st 2017?",
-    "Did you know",
-    "Did you know",
-    "Did you know",
-    "Did you know",
-    "Did you know",
-    "Did you know",
-    "Did you know",
-    "Did you know",
-    "Did you know",
-    "Did you know",
-    "Did you know",
+    "Did you know that Chiikawa is Non-binary?", 
+    "Did you know the full title of Chiikawa(Nanka Chiisakute Kawaii Yatsu) means 'Something Small and Cute'?",
+    "Did you know Chiikawa is seen as a timid and weak but brave character?",
+    "Did you know Chiikawa is the weakest out of the Usagi and Hachiware trio?",
+    "Did you know Chiikawa is not a hamster but a cute little thing?",
+    "Did you know Chiikawa once won a house in a yogurt contest?",
+    "Did you know Chiikawa hates broccoli?",
+    "Did you know Chiikawa has 4 toes?",
+    "Did you know Chiikawa's birthday is May 1st 2017?",
+    "Did you know Chiikawa is a cry baby. T-T",
+    "Did you know Usagi is a fatty?",
+    "Did you know Hachiware is inspired by a Cat!?",
+    "Did you know Usagi is inspired by a yellow rabbit!?",
+    "Did you know Marcus is?",
+    "Did you know Marcus drew everything in this website?",
+    "Did you know Chiikawa is a Japanese show?",
+    "Did you know the show Chiikawa is called ちいかわ in Japanese?",
+    "Did you know Chiikawa can't talk properly?",
+    "Did you know Kuri-Manjū is an alcoholic?",
+    "Did you know Hachiware, Usagi, and Chiikawa are the main characters of the show?",
 ]
 
 
@@ -137,17 +137,45 @@ colorButton.addEventListener("click", function(){
     }
 })
 
-
-
-
 const bioButton = document.getElementById('bioButton')
 bioButton.addEventListener('click', function(){
-    window.location.href = 'bio.html'
+    window.location.href = 'bio.html';
 })
 
+const buttonOne = document.getElementById('button1');
+const buttonTwo = document.getElementById('button2');
+const buttonThree = document.getElementById('button3');
+const buttonFour = document.getElementById('button4');
+const buttonFive = document.getElementById('button5');
+const buttonSix = document.getElementById('button6');
+const buttonSeven = document.getElementById('button7');
+const Bouncy = new Audio('/Music/02. Bouncy.mp3');
+const Daytime = new Audio('/Music/04. Daytime Theme.mp3');
+const Nighttime = new Audio('/Music/09. Nighttime Theme.mp3');
+const Timely = new Audio('/Music/21. Timely.mp3');
+const Beach = new Audio('/Music/Kevin MacLeod - Beach Party.mp3');
+const Duck = new Audio('/Music/Kevin MacLeod - Fluffing a Duck.mp3');
+songList = [Bouncy, Daytime, Nighttime, Timely, Beach, Duck];
 
- 
- 
- 
-// For everyones reference, the above code is the bulk of the logic for dragging and dropping,
-// So try and not touch the code above.
+buttonOne.addEventListener('click', function() {Bouncy.play(); pausing(1)});
+buttonTwo.addEventListener('click', function() {Daytime.play(); pausing(2)});
+buttonThree.addEventListener('click', function() {Nighttime.play(); pausing(3)});
+buttonFour.addEventListener('click', function() {Timely.play(); pausing(4)});
+buttonFive.addEventListener('click', function() {Beach.play(); pausing(5)});
+buttonSix.addEventListener('click', function() {Duck.play(); pausing(6)});
+
+function pausing(exempt) {
+    for (let i = 0; i < songList.length+1; i++) {
+        if (i+1 == exempt) {
+            continue
+        } else {
+            try {
+                songList[i].pause();
+                songList[i].currentTime = 0;
+            } catch {
+                console.log(`playing a song!`);
+            }
+            
+        }
+    }
+}

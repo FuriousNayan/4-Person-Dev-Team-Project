@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team Bio</title>
+  <script src="bio.js" defer ></script>
   <style>
     @font-face{
         font-family: 'cookieFont';
@@ -20,13 +21,13 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      gap: 20px;
+      gap: 10px;
     }
 
     .bio-card {
       background-color: white;
       padding: 15px;
-      width: 220px;
+      width: 20%;
       text-align: center;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -42,42 +43,87 @@
 
     .bio-card h3 {
       margin: 10px 0 5px;
+      font-size: 24px;
     }
 
     .bio-card p {
       font-size: 14px;
-      color: #555;
+      color: black;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    #role {
+      text-align: center;
+    }
+
+    #hashtag {
+      text-align: left;
+    }
+
+    #return {
+      width: 75px;
+      height: 30px;
+      position: absolute;
+      bottom: 20px;
+      left: 4%;        
+      transform: translateX(-50%);
+      font-size: large;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-family: cookiefont;
     }
   </style>
+
 </head>
 <body>
-  <h1>Meet Our Team</h1>
+  <h1>Meet Our Team: Chiikawa Comics</h1>
   <div class="team-container">
     
-    <div class="bio-card">
-      <img src="Headshot Images/Angel Headshot.jpg" alt="Person 1">
+    <div class="bio-card" style="background-color: rgb(255, 223, 248);">
+      <img src="Headshot Images/Chiikawa.jpg" alt="Person 1">
       <h3>Angel Carmichael</h3>
-      <p>Input bio here</p>
+      <p id="role">Role: Project Manager</p>
+      <p>
+        Durning this project I have connected with the character Chiikawa because they are protective and weak. 
+        All bark and no bite. With big puffy cheeks. CHIIKAWA FOR LIFE!!!!!! 
+        <br><br>P.S : My name is Kodak Black and when you see him I'm white.</p>
     </div>
 
-    <div class="bio-card">
-      <img src="Headshot Images/Bianca Headshot.JPEG" alt="Person 2">
+    <div class="bio-card" style="background-color: rgb(255, 251, 202);">
+      <img src="Headshot Images/Usagi.jpg" alt="Person 2">
       <h3>Bianca Baccay</h3>
-      <p>Input bio here</p>
+      <p id="role">Role: Lead Programmer/Lead Designer</p>
+      <P>
+        A Computer Programming Student who is spiritually connected to Usagi who is such a fun and loving character. 
+        He is caring to his friends in the Chiikawa show. He makes no mistakes and he is never wrong. 
+        My beloved Usagi should have been the main character, not Chiikawa. Usagi FOREVER!!! </P>
+      <p id="hashtag">#UsagiNeverDies #UsagiDisappear! #BeholdUsagi</p>
     </div>
 
-    <div class="bio-card">
-      <img src="add-image" alt="Person 3">
+    <div class="bio-card" style="background-color: rgb(168, 191, 255);">
+      <img src="Headshot Images/Hachiware.png" alt="Person 3">
       <h3>Marcus Prado</h3>
-      <p>Input bio here</p>
+      <p id="role">Role: Lead Artist</p><p>
+        In the daytime, I'm Marcus Prado, a normal programmer, with a normal life! 
+        But theres something out there, that no one knows yet, cuz I have a secret. 
+        Hachiware, simply the best, up to the test, when things go wrong! 
+        Hachiware, the luckiest, the power of love always so strong!</p>
     </div>
 
-    <div class="bio-card">
-      <img src="Headshot Images/Nayan Headshot.jpeg"Person 4">
+    <div class="bio-card" style="background-color:  rgb(214, 178, 255);">
+      <img src="Headshot Images/Momonga.jpg"Person 4">
       <h3>Nayan Patel</h3>
-      <p>Input bio here.</p>
-    </div>
+      <p id="role">Role: Lead Designer/Lead Programmer</p>
+      <p>
 
+      </p>
+    </div>
+    
   </div>
+
+  <button id="return">Return</button>
+
 </body>
 </html>
