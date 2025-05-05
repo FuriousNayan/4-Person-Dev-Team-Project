@@ -1,4 +1,5 @@
 const dropAreas = document.querySelectorAll(".dropBox")
+ 
 const funFacts = []
 
 
@@ -11,22 +12,22 @@ dropAreas.forEach((dArea) => {
     dArea.addEventListener("dragover", (event) => {
         event.preventDefault();
     })
-
+ 
     dArea.addEventListener("dragstart", (event) => {
         const elements = dArea.children;
         event.dataTransfer.setData("text/plain", elements[0].src);
     })
-
+ 
     dArea.addEventListener("dragleave", (event) => {
         event.preventDefault();
         dArea.innerHTML = "Drop Image Here"
     })
-
+ 
     dArea.addEventListener("drop", (event) => {
         event.preventDefault();
-
+ 
         const files = event.dataTransfer.files;
-
+ 
         if(files.length > 0) {
             const file = files[0];
             if (file.type.startsWith("image/")){
@@ -35,7 +36,7 @@ dropAreas.forEach((dArea) => {
                     const img = new Image();
                     img.src = event.target.result;
                     img.draggable = true;
-
+ 
                     dArea.innerHTML = "";
                     dArea.appendChild(img)
                 }
@@ -49,13 +50,15 @@ dropAreas.forEach((dArea) => {
             const img = new Image();
             img.src = imgPath;
             img.draggable = true;
-
+ 
             dArea.innerHTML = ""
             dArea.appendChild(img)
         }
     })
 })
+ 
 const imageSidebar = document.getElementById("image-sidebar")
+const soundSidebar = document.getElementById('right-bar')
 const hideButton = document.getElementById("hideButton")
 const container = document.querySelectorAll(".container")
  
@@ -64,16 +67,21 @@ let hidden = false;
 hideButton.addEventListener("click", function() {
     if (hidden) {
         imageSidebar.style.display = "grid"
+        soundSidebar.style.display = 'flex';
         hideButton.innerHTML = "Hide"
         hidden = false;
     } else {
         imageSidebar.style.display = "none"
+        soundSidebar.style.display = 'none';
         hideButton.innerHTML = "Unhide"
         hidden = true;
     }
 })
+ 
 
 
-
+ 
+ 
+ 
 // For everyones reference, the above code is the bulk of the logic for dragging and dropping,
-// So try and not touch the code above. 
+// So try and not touch the code above.
