@@ -27,7 +27,7 @@ const funFacts = [
 setInterval(() => {
     const randomIndex = Math.floor(Math.random() * funFacts.length);
     alert(funFacts[randomIndex]);
-  }, 60000); 
+  }, 300000); 
 
 dropAreas.forEach((dArea) => {
     dArea.addEventListener("dragover", (event) => {
@@ -156,6 +156,8 @@ const Timely = new Audio('/Music/21. Timely.mp3');
 const Beach = new Audio('/Music/Kevin MacLeod - Beach Party.mp3');
 const Duck = new Audio('/Music/Kevin MacLeod - Fluffing a Duck.mp3');
 songList = [Bouncy, Daytime, Nighttime, Timely, Beach, Duck];
+imageSongList = [Song1,Song2,Song3,Song4,Song5,Song6];
+isPLaying = [false, false, false, false, false, false]
 
 buttonOne.addEventListener('click', function() {Bouncy.play(); pausing(1)});
 buttonTwo.addEventListener('click', function() {Daytime.play(); pausing(2)});
@@ -167,14 +169,21 @@ buttonSix.addEventListener('click', function() {Duck.play(); pausing(6)});
 function pausing(exempt) {
     for (let i = 0; i < songList.length+1; i++) {
         if (i+1 == exempt) {
+            if (isPLaying[exempt-1]){
+                songList[exempt-1].pause()
+                isPLaying[exempt-1] = false;
+            } else {
+                imageSongList[i].style.opacity = '50%';
+                isPLaying[exempt-1] = true;
+            }
             continue
         } else {
             try {
+                imageSongList[i].style.opacity = '100%';
+                isPLaying[i] = false;
                 songList[i].pause();
                 songList[i].currentTime = 0;
-            } catch {
-                console.log(`playing a song!`);
-            }
+            } catch {}
             
         }
     }
