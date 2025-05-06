@@ -91,11 +91,13 @@ hideButton.addEventListener("click", function() {
         imageSidebar.style.display = "grid"
         soundSidebar.style.display = 'flex';
         hideButton.innerHTML = "Hide"
+        hideButton.style.width = '50px';
         hidden = false;
     } else {
         imageSidebar.style.display = "none"
         soundSidebar.style.display = 'none';
         hideButton.innerHTML = "Unhide"
+        hideButton.style.width = '75px';
         hidden = true;
     }
 })
@@ -116,23 +118,23 @@ colorButton.addEventListener("click", function(){
         logo.src = "Images/LogoPink.png"
         rightBar.style.backgroundColor = "#fbc9f0"
         imageSidebar.style.backgroundColor = "#fbc9f0"
-        Song1.src = "/Other/Song1Pink.png"
-        Song2.src = "/Other/Song2Pink.png"
-        Song3.src = "/Other/Song3Pink.png"
-        Song4.src = "/Other/Song4Pink.png"
-        Song5.src = "/Other/Song5Pink.png"
-        Song6.src = "/Other/Song6Pink.png"
+        Song1.src = "Images/Song1Pink.png"
+        Song2.src = "Images/Song2Pink.png"
+        Song3.src = "Images/Song3Pink.png"
+        Song4.src = "Images/Song4Pink.png"
+        Song5.src = "Images/Song5Pink.png"
+        Song6.src = "Images/Song6Pink.png"
         color = "pink"
     } else {
         logo.src = "Images/LogoAlternative.png"
         rightBar.style.backgroundColor = "#3f6a86"
         imageSidebar.style.backgroundColor = "#3f6a86"
-        Song1.src = "/Other/Song1.png"
-        Song2.src = "/Other/Song2.png"
-        Song3.src = "/Other/Song3.png"
-        Song4.src = "/Other/Song4.png"
-        Song5.src = "/Other/Song5.png"
-        Song6.src = "/Other/Song6.png"
+        Song1.src = "Images/Song1.png"
+        Song2.src = "Images/Song2.png"
+        Song3.src = "Images/Song3.png"
+        Song4.src = "Images/Song4.png"
+        Song5.src = "Images/Song5.png"
+        Song6.src = "Images/Song6.png"
         color = "blue"
     }
 })
