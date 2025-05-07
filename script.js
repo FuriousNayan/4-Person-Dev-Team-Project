@@ -1,5 +1,7 @@
+// Selecting all the drop boxes where the images will be located at. 
 const dropAreas = document.querySelectorAll(".dropBox")
- 
+
+// Creating an array of fun facts where it is randomly displayed every 1 minute. 
 const funFacts = [
     "Did you know that Chiikawa is Non-binary?", 
     "Did you know the full title of Chiikawa(Nanka Chiisakute Kawaii Yatsu) means 'Something Small and Cute'?",
@@ -23,32 +25,38 @@ const funFacts = [
     "Did you know Hachiware, Usagi, and Chiikawa are the main characters of the show?",
 ]
 
-
+// Using the setInterval function to alert the user of a joke every 1 minute. 
 setInterval(() => {
     const randomIndex = Math.floor(Math.random() * funFacts.length);
     alert(funFacts[randomIndex]);
-  }, 300000); 
+  }, 600000); 
 
+// Once you drag over a dropbox, it prevents the default, which is to not move the draggable item. 
 dropAreas.forEach((dArea) => {
     dArea.addEventListener("dragover", (event) => {
         event.preventDefault();
     })
  
+    // Once you start the drag, it takes the children of each drop area and transfers the data when you are going in between boxes. It chooses the 1st imgae using the [0]
     dArea.addEventListener("dragstart", (event) => {
         const elements = dArea.children;
         event.dataTransfer.setData("text/plain", elements[0].src);
     })
  
+    // Once you leave the drag, prevents the default, and replaces the area saying "drop image here"
     dArea.addEventListener("dragleave", (event) => {
         event.preventDefault();
         dArea.innerHTML = "Drop Image Here"
     })
  
+    // Once you drop the image, it prevents the default (which is to do nothing), and puts all the datatransfer files in one variable named files. 
     dArea.addEventListener("drop", (event) => {
         event.preventDefault();
  
         const files = event.dataTransfer.files;
- 
+        
+        // If there are images in files, it takes the first image, then it checks if it is an image, then it creates a new file reader, the when the reader loads, it makes a new image, then makes it draggable.
+        // After, it appends the image to the drop area. If something goes wrong, it alerts saying please drop an image. The top portion is to get images from your computer.
         if(files.length > 0) {
             const file = files[0];
             if (file.type.startsWith("image/")){
@@ -65,6 +73,7 @@ dropAreas.forEach((dArea) => {
             }else {
                 alert("Please drop an image file")
             }
+        // If there are no images in files, it takes it from the existing webpage, and transfers it from there. The bottom pertion of this code is to get images already displayed on the webpage. 
         } else {
             dArea.innerHTML = "";
             const imgPath = event.dataTransfer.getData("text/plain");
@@ -77,14 +86,16 @@ dropAreas.forEach((dArea) => {
         }
     })
 })
- 
+
+// Getting the imagesidebar, rightbar, hidebutton, colorbutton, and container. 
 const imageSidebar = document.getElementById("image-sidebar")
 const soundSidebar = document.getElementById('right-bar')
 const hideButton = document.getElementById("hideButton")
 const colorButton = document.getElementById("colorButton")
 const container = document.querySelectorAll(".container")
  
-// Button function to remove sidebar
+// First hidden is false, if the hidebutton is clicked, the hidden variable will equal true, the sidebar is gone.
+// Once you click it again, and hidden is true, it will bring it all back. 
 let hidden = false;
 hideButton.addEventListener("click", function() {
     if (hidden) {
@@ -102,6 +113,7 @@ hideButton.addEventListener("click", function() {
     }
 })
 
+// Getting all the songs from the HTML
 const Song1 = document.getElementById("Song1")
 const Song2 = document.getElementById("Song2")
 const Song3 = document.getElementById("Song3")
@@ -109,7 +121,8 @@ const Song4 = document.getElementById("Song4")
 const Song5 = document.getElementById("Song5")
 const Song6 = document.getElementById("Song6")
 
- 
+
+// Changing the color theme for the songs, blue to pink, pink to blue. 
 const logo = document.getElementById("Logo")
 const rightBar = document.getElementById("right-bar")
 let color = "blue";
@@ -139,11 +152,13 @@ colorButton.addEventListener("click", function(){
     }
 })
 
+// Getting the biobutton, if clicked, go to bio.html
 const bioButton = document.getElementById('bioButton')
 bioButton.addEventListener('click', function(){
     window.location.href = 'bio.html';
 })
 
+// Getting the buttons for the audio, and creating the new audio files dynamically. 
 const buttonOne = document.getElementById('button1');
 const buttonTwo = document.getElementById('button2');
 const buttonThree = document.getElementById('button3');
@@ -161,6 +176,7 @@ songList = [Bouncy, Daytime, Nighttime, Timely, Beach, Duck];
 imageSongList = [Song1,Song2,Song3,Song4,Song5,Song6];
 isPLaying = [false, false, false, false, false, false]
 
+// These are event listeners to listen for the click, and calles the pausing function.
 buttonOne.addEventListener('click', function() {Bouncy.play(); pausing(1)});
 buttonTwo.addEventListener('click', function() {Daytime.play(); pausing(2)});
 buttonThree.addEventListener('click', function() {Nighttime.play(); pausing(3)});
@@ -168,6 +184,9 @@ buttonFour.addEventListener('click', function() {Timely.play(); pausing(4)});
 buttonFive.addEventListener('click', function() {Beach.play(); pausing(5)});
 buttonSix.addEventListener('click', function() {Duck.play(); pausing(6)});
 
+// Once the button is clicked, it loops through the song list, if the song is the same as the one exempted, it skips through it. 
+// If it is not the one that is exempted, it will reset the song. By the css side, it changes the opacity to 100%. 
+// If its the one that is exempted, and it is playing, then it will be paused. 
 function pausing(exempt) {
     for (let i = 0; i < songList.length+1; i++) {
         if (i+1 == exempt) {
