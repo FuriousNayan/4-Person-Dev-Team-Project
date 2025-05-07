@@ -11,4 +11,6 @@ This is an interactive comic creator that allows the user to drag and drop story
 
 - Angel: Project Manager, managing and documenting who accomplishes what tasks each day. Kept a record of each daily twist, kept everyone on task, and equally distributing the workload. Added all the facts, and included the title logic and css. Added the copyright information to the biopage. 
 
-- Nayan: Created the main logic of the drag and drop function; creating the sidebar, all the drop boxes, and event listeners and data transfer for all images. Switched from Lead Programmer to Lead Designer. Created the HTML and a bit of CSS to the biopage. Created the button to go to the biopage using event listeners. Adding in the logic for the random function, which outputted each fact randomly to the page. Fully commented and created pseudocode for the javascript files. 
+- Nayan: Created the main logic of the drag and drop function; creating the sidebar, all the drop boxes, and event listeners and data transfer for all images. Switched from Lead Programmer to Lead Designer. Created the HTML and a bit of CSS to the biopage. Created the button to go to the biopage using event listeners. Adding in the logic for the random function, which outputted each fact randomly to the page. Fully commented and created pseudocode for the javascript files.
+
+![image](https://github.com/user-attachments/assets/bfdb1aff-38f9-4f19-a461-a79677c94dea)
